@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head> 
+<title> UNIX Tutorial Six</title> 
+<link href="unixtut1.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="Copyright" content="Michael Stonebank, 1995" />
+</head> 
+ 
+<body>
+<h1>UNIX Tutorial Six </h1>
+<h2>Other useful UNIX commands &nbsp; </h2>
+
+<h3>df</h3>
+<p>The df command reports on the space left on the file system. For example, to 
+  find out how much space is left on the fileserver, type </p>
+
+<p class="command"> % df . </p>
+
+<h3>du</h3>
+<p>The du command outputs the number of kilobyes used by each subdirectory. Useful 
+  if you have gone over quota and you want to find out which directory has the 
+  most files. In your home-directory, type </p>
+
+<p class="command"> % du /home/ec2-user/environment</p>
+
+<h3>gzip</h3>
+<p>gzip reduces the size of a file, thus freeing valuable disk space. For example, 
+  type </p>
+
+<p class="command"> % cd /home/ec2-user/environment/unixstuff </p>
+<p class="command"> % ls -l words </p>
+<p>if you don't see the <samp>words</samp> file there, make sure you have copied it
+ as specified in tutorial 2</p>
+<p>Note the size of the <samp>words</samp>file. Then to compress it, type </p>
+
+<p class="command"> % gzip words </p>
+<p>This will compress the file and place it in a file called words.gz </p>
+<p> To see the change in size, type ls -l again. </p>
+<p> To uncomress the file, use the gunzip command. </p>
+
+<p class="command"> % gunzip words.gz </p>
+
+<h3>file</h3>
+<p>file classifies the named files according to the type of data they contain, 
+  for example ascii (text), pictures, compressed data, etc.. To report on all 
+  files in your home directory, type </p>
+
+<p class="command"> % file * </p>
+
+<h3>find</h3>
+<p>find helps you locate a file somewhere in the folder structure.
+  It is very powerful and can take many different arguments (try "man find" to 
+  see them all). Usually, you give it the place you want to start searching and
+  the name you are looking for:</p>
+
+<p class="command"> % find . -name somefile </p>
+
+<p>Remember, you can also use "wildcards" like * and ?</p>
+
+<p class="command"> % find . -name some* </p>
+<p class="command"> % find . -name s?me?ile </p>
+
+<p>An example for us would be trying to remember where you put README.bak</a>
+
+<p class="command"> % cd /home/ec2-user/environment/ </p>
+<p class="command"> % find . -name README.bak </p>
+
+<p> Where did it find it? If it didn't, ask Mr. B for help</p>
+
+<h3>history</h3>
+<p>The bash shell keeps an ordered list of all the commands that you have entered. 
+  Each command is given a number according to the order it was entered.</p>
+
+<p class="command"> % history (show command history list)</p>
+<p>Since we are using the bash shell, we can use the exclamation character (!) to 
+  recall commands easily.</p>
+
+<p class="command">% !! (recall last command)</p>
+<p class="command">% !-3 (recall third most recent command) </p>
+<p class="command">% !5 (recall 5th command in list) </p>
+<p class="command">% !grep (recall last command starting with grep) </p>
+<p>You can increase the size of the history buffer by typing</p>
+
+<p class="command">% HISTSIZE=1000 </p>
+    <p> </p>
+<p class="navbar"><a href="unix5.html"><img src="media/left.gif" alt="Previous" width="37" height="39" border="0" /></a> 
+  <a href="index.html"><img src="media/home.gif" alt="Home" width="81" height="39" border="0" /></a> 
+  <a href="unix8.html"><img src="media/right.gif" alt="Next" width="37" height="39" border="0" /></a> 
+</p>
+
+<p class="date"> M.Stonebank@surrey.ac.uk, &copy; 24th August 2001 </p>
+
+
+</body>
+</html>
