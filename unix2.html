@@ -53,7 +53,7 @@
   <h2>2.3 Removing files and directories </h2>
   <h3>rm (remove), rmdir (remove directory)</h3>
   <p>To delete (remove) a file, use the <samp>rm</samp> command. As an example,
-    we are going to create a copy of the <strong>README.md</strong> file then
+    we are going to create a copy of the <strong>user-dirs.dirs</strong> file then
     delete it. </p>
   <p> Inside your <strong>unixstuff</strong> directory, type</p>
   <p class="command"> % cp user-dirs.dirs tempfile<br />
@@ -130,7 +130,7 @@
   <p>You'll notice that the second command (with the i-) finds both "john" and "John"</p>
   <p> To search for a phrase or pattern, you must enclose it in single quotes (the
     apostrophe symbol). For example to search for the phrase "Hi there", type </p>
-  <p class="command"> % grep -i 'Hi there' README.md </p>
+  <p class="command"> % grep -i 'the next run' user-dirs.dirs </p>
   <p> Some of the other options of grep are: </p>
   <p> -v display those lines that do NOT match <br />
     -n precede each maching line with the line number <br />
@@ -139,16 +139,16 @@
   <h3>Exercise 2d</h3>
   <p> Try some of them and see the different results. Don't forget, you can use
     more than one option at a time, for example, the number of lines without the
-    words welcome or Welcome is</p>
-  <p class="command"> % grep -ivc welcome README.md </p>
+    words Formet or format is</p>
+  <p class="command"> % grep -ivc format user-dirs.dirs </p>
   <p>Why do you think it prints the number 13? Does that make sense to you?</p>
   <p>&nbsp;</p>
   <h3>wc (word count)</h3>
   <p>A handy little utility is the <samp>wc</samp> command, short for word count.
-    To do a word count on <strong>README.md</strong>, type </p>
-  <p class="command"> % wc -w README.md </p>
+    To do a word count on <strong>user-dirs.dirs</strong>, type </p>
+  <p class="command"> % wc -w user-dirs.dirs </p>
   <p> To find out how many lines the file has, type </p>
-  <p class="command"> % wc -l README.md </p>
+  <p class="command"> % wc -l user-dirs.dirs </p>
   <h2>Summary </h2>
   <table border="1" align="center" cellpadding="3" cellspacing="0">
     <tr>
