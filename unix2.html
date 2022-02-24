@@ -27,7 +27,8 @@
   <p class="command"> % cp ~/.config/user-dirs.dirs . </p>
   <p> (Note: Don't forget the dot (<samp>.</samp>) at the end. Remember, in UNIX,
     the dot means the current directory.) </p>
-  <p> The above command means copy the file <strong>user-dirs.dirs</strong> to the
+  <p> The above command means copy the file <strong>user-dirs.dirs</strong> from a hidden folder
+    (notice the . at the start of its name) <strong>.config</strong> to the
     current directory, keeping the name the same. </p>
 
   <p>&nbsp;</p>
@@ -46,7 +47,7 @@
   <p> We are now going to move the file README.bak to your backup directory. </p>
   <p>First, change directories to your unixstuff directory (can you remember how?).
     Then, inside the <strong>unixstuff</strong> directory, type</p>
-  <p class="command"> % mv README.bak backups/.</p>
+  <p class="command"> % mv user-dirs.bak backups/.</p>
   <p> Type <code>ls</code> and <code>ls backups</code> to see if it has worked.
   </p>
   <h2>2.3 Removing files and directories </h2>
@@ -55,9 +56,9 @@
     we are going to create a copy of the <strong>README.md</strong> file then
     delete it. </p>
   <p> Inside your <strong>unixstuff</strong> directory, type</p>
-  <p class="command"> % cp README.md tempfile.md<br />
+  <p class="command"> % cp user-dirs.dirs tempfile<br />
     % ls (to check if it has created the file)<br />
-    % rm tempfile.md <br />
+    % rm tempfile <br />
     % ls (to check if it has deleted the file) </p>
   <p> You can use the <samp>rmdir</samp> command to remove a directory (make sure
     it is empty first). Try to remove the <strong>backups</strong> directory. You
