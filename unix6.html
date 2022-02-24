@@ -16,7 +16,7 @@
 
   <h3>df</h3>
   <p>The df command reports on the space left on the file system. For example, to
-    find out how much space is left on the fileserver, type </p>
+    find out how much space is left on your hard drive, type </p>
 
   <p class="command"> % df . </p>
 
@@ -64,12 +64,17 @@
   <p class="command"> % find . -name some* </p>
   <p class="command"> % find . -name s?me?ile </p>
 
-  <p>An example for us would be trying to remember where you put README.bak</a>
+  <p>An example for us would be trying to remember where you put user-dirs.bak</a>
 
     <p class="command"> % cd ~/ </p>
-    <p class="command"> % find . -name README.bak </p>
+    <p class="command"> % find . -name user-dirs.bak </p>
 
     <p> Where did it find it? If it didn't, ask Mr. B for help</p>
+
+    <p> Try these - what do you think is going to happen? What happens?</p>
+
+    <p class="command"> % find . -name *.bak </p>
+    <p class="command"> % find . -name *.txt </p>
 
     <h3>history</h3>
     <p>The bash shell keeps an ordered list of all the commands that you have entered.
